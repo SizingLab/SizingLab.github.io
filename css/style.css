@@ -1,0 +1,131 @@
+/*
+ * This css file includes styles added in the jekyll port of this theme.
+ * To find the original style.css that ships with Airspace, read airspace.css
+ *
+ */
+
+ .italic {
+   font-style: italic;
+ }
+
+ .bold {
+   font-weight: bold;
+ }
+
+ .center-text {
+   text-align: center;
+ }
+
+.post-area {
+  padding: 40px 0 0px 0;
+  min-height: 150px;
+  background-color: white;
+	text-align:center;
+}
+
+
+.post-area a:link, .post-area a:visited {
+  font-size: 30px;
+  color: #333;
+}
+
+
+.post-description{
+padding: 25px;
+    font-size: 27px;
+       font-family: 'Roboto', sans-serif;
+    color: #333;
+	    margin: 0;
+		   
+}
+.case{
+ height: 90px;
+			flex: auto;
+}
+.case:hover{
+	background-color: #F5F5F5;
+    cursor: pointer;
+}
+.post-area a:link, .post-area a:visited {
+	font-size:20px;
+}
+
+.cont-case{
+	   line-height: 90px;
+	      flex: auto;
+		  display: flex;
+		  flex-direction: row;
+	
+}
+
+.cleft{
+	 border-right: 1px solid #ddd;
+}
+
+
+
+.post h4 {
+margin-top : 30px;
+}
+.post h1 {
+    text-align: center;
+}
+#accueil-img{
+    display: block;
+       margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+#intro {
+    padding: 50px 0;
+
+}
+
+.collapsible{
+	    background: none;
+    border: none;
+	    float: right;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.divider{
+	
+	    border-bottom: 2px solid #ddd;
+}
+.space{
+	height:50px;
+}
+
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+  .dropdown>.dropdown-toggle:active {
+    pointer-events: none;   
+}
+
+}
+.listp{
+	color: #7B7B7B;
+    padding-top: 10px;
+	    font-size: 15px;
+    line-height: 28px;
+	    margin: 0 0 10px;
+		    list-style: circle;
+			padding-left: 10%;
+	
+}
+.listp li{
+	margin-bottom:10px;	
+}
+.lang{
+	
+	   float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+line-height: 20px;}

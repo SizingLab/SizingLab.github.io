@@ -1,0 +1,73 @@
+<!-- footer Start -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer-manu">
+          <ul>
+		  {% if page.lang == "en" %}
+		   <li><a href="{{ site.baseurl }}/{{page.lang}}/">Home</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/institutes">Institutes</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/members">Members</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/publications">Publications</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/packages">Packages</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources">Our ressources</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources-ext">External ressources</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/models">Models</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases">Studies cases</a></li>
+			{% endif %}
+           {% if page.lang == "fr" %}
+					<li><a href="{{ site.baseurl }}/{{page.lang}}/">Accueil</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/institutes">Instituts</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/members">Membres</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/publications">Publications</a></li>
+							<li><a href="{{ site.baseurl }}/{{page.lang}}/packages">Packages</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources">Nos ressources</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources-ext">Ressources externes</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/models">Modèles</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases">Cas d'études</a></li>
+		   {% endif %}
+          </ul>
+        </div>
+        <p>Copyright &copy; Design &amp; Developed by <a href="http://www.themefisher.com">Themefisher</a>. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+	<script>
+var coll = document.getElementsByClassName("expand");
+
+
+
+for (var i = 0; i < coll.length; i++) { 
+	var button = document.createElement("button");
+	button.innerHTML = "+";
+	button.className = "collapsible";
+	coll[i].appendChild(button);
+	
+	var content = document.createElement('div');
+	content.className = "content";
+	coll[i].parentNode.insertBefore(content,coll[i].nextSibling);
+	var elmt = content.nextElementSibling;
+	while(elmt != null && elmt.tagName != "H2"){
+		content.appendChild(elmt);
+		elmt =  content.nextElementSibling;
+	}
+	
+	coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+	
+	var content = this.nextElementSibling ;
+	var button =  this.lastChild;
+   if (content.style.maxHeight){
+      content.style.maxHeight = null;
+	  button.innerHTML = "+";
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+	  	 button.innerHTML = "−";
+    } 
+   
+  });
+  //coll[i].click();
+}
+</script>
+</footer>

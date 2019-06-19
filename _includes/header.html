@@ -1,0 +1,103 @@
+<!-- Header Start -->
+<header>
+{% assign sub = page.path | split: "/" %}
+			
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- header Nav Start -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+			<div class="navbar-brand">
+			<img src="{{site.baseurl}}/img/logo.png" alt="Logo" style="height: 50px;float:left;margin-right:10px">
+			</div>
+			
+			
+          </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+				{% if page.lang == "en" %}
+				<li {% if page.url == "/en/"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}">Home</a></li>
+				<li class ="dropdown {% if page.url == "/en/institutes/" or page.url == "/en/members/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Partners</a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/institutes">Institutes</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/members">Members</a></li>
+					</ul>
+				</li>
+				<li class ="dropdown {% if page.url == "/en/publications/" or page.url == "/en/packages/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Methods & Tools</a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/publications">Publications</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/packages">Packages</a></li>
+					</ul>
+				</li>
+				<li class ="dropdown {% if page.url == "/en/ressources/" or page.url == "/en/ressources-ext/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Web Learning</a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources">Our ressources</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources-ext">External ressources</a></li>
+					</ul>
+				</li>
+				<li class ="dropdown {% if page.url == "/en/models/" or page.url == "/en/cases/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Examples</a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/models">Models</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases">Cases studies</a></li>
+					</ul>
+				</li>
+				{% if sub.first == "_correctionsen" %}
+					<li><a href="{{site.baseurl}}{{page.url | replace:"correctionsen","correctionsfr"}}"><span style="color:#d2814c;font-weight:bold">EN</span> / FR</a></li>	
+				{% else %}
+					<li><a href="{{site.baseurl}}{{page.url | replace:"/en","/fr"}}"><span style="color:#d2814c;font-weight:bold">EN</span> / FR</a></li>
+				{% endif %}
+				
+			
+				{% endif %}
+				{% if page.lang == "fr" %}
+				
+				<li {% if page.url == "/fr/"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}">Accueil</a></li>
+				<li class ="dropdown {% if page.url == "/fr/institutes/" or page.url == "/fr/members/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Partenaires</a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/institutes">Instituts</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/members">Membres</a></li>
+					</ul>
+				</li>
+				<li class ="dropdown {% if page.url == "/fr/publications/" or page.url == "/fr/packages/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Methodes & Outils</a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/publications">Publications</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/packages">Packages</a></li>
+					</ul>
+				</li>
+				<li class ="dropdown {% if page.url == "/fr/ressources/" or page.url == "/fr/ressources-ext/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Apprendre</a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources">Nos ressources</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources-ext">Ressources externes</a></li>
+					</ul>
+				</li>
+				<li class ="dropdown {% if page.url == "/fr/models/" or page.url == "/fr/cases/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Exemples</a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/models">Modèles</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases">Cas d'études</a></li>
+					</ul>
+				</li>
+				{% if sub.first == "_correctionsfr" %}
+					<li><a href="{{site.baseurl}}{{page.url | replace:"correctionsfr","correctionsen"}}">EN / <span style="color:#d2814c;font-weight:bold">FR</span></a></li>	
+				{% else %}
+				<li><a href="{{site.baseurl}}{{page.url | replace:"/fr","/en"}}">EN / <span style="color:#d2814c;font-weight:bold">FR</span></a></li>
+				{% endif %}
+			
+				{% endif %}
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><!-- header close -->

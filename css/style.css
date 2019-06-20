@@ -65,7 +65,8 @@ padding: 25px;
 
 
 .post h4 {
-margin-top : 30px;
+margin-top : 15px;
+display:inline-block;
 }
 .post h1 {
     text-align: center;
@@ -129,3 +130,9 @@ margin-top : 30px;
     padding: 15px 15px;
     font-size: 18px;
 line-height: 20px;}
+
+iframe{
+	display:block;
+margin-right: auto;
+margin-left:auto;
+}

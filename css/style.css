@@ -136,3 +136,13 @@ iframe{
 margin-right: auto;
 margin-left:auto;
 }
+.footer-copyright{
+padding-top: 30px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+#myFooter h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+}

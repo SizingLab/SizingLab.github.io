@@ -1,7 +1,6 @@
 
 exclude:
   - "/vendor/"
-  - "/notebooks/"
   - "Gemfile"
   - "Gemfile.lock"
   - "README.md"
@@ -16,35 +15,15 @@ keep_files:
 
 # Site settings
 title: Sizing Lab
-url: "http://fantomos.github.io" # the base hostname & protocol for your site
+url: "http://SizingLab.github.io" # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
-baseurl: "/sizinglab"
+baseurl: "/"
 cover: "/assets/cover.png"
 logo: "/assets/logo.png"
 # Build settings
 markdown: kramdown
     
-collections:
-  correctionsen:
-       output: true
-  correctionsfr:
-       output: true
-
 defaults:
-  - scope:
-      path: ""
-      type: "correctionsen"
-    values:
-      lang: "en"
-      layout: chapspage
-      
-  - scope:
-      path: ""
-      type: "correctionsfr"
-    values:
-      lang: "fr"
-      layout: chapspage
-      
   - scope:
       path: ""
     values:

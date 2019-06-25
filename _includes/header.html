@@ -60,8 +60,6 @@
 			
 				{% endif %}
 				{% if page.lang == "fr" %}
-				
-				<li {% if page.url == "/fr/"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}">Accueil</a></li>
 				<li class ="dropdown {% if page.url == "/fr/institutes/" or page.url == "/fr/members/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Partenaires</a>
 					<ul class="dropdown-menu">
 						<li><a href="{{ site.baseurl }}/{{page.lang}}/institutes">Instituts</a></li>

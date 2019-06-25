@@ -50,7 +50,7 @@
 						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases">Cases studies</a></li>
 					</ul>
 				</li>
-				<li {% if page.url == "/en/contact"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}/contact">Contact</a></li>
+				<li {% if page.url == "/en/contact/"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}/contact">Contact</a></li>
 				{% if sub.first == "_correctionsen" %}
 					<li><a href="{{site.baseurl}}{{page.url | replace:"correctionsen","correctionsfr"}}"><span style="color:#d2814c;font-weight:bold">EN</span> / FR</a></li>	
 				{% else %}
@@ -86,7 +86,7 @@
 						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases">Cas d'études</a></li>
 					</ul>
 				</li>
-				<li {% if page.url == "/en/contact"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}/contact">Contact</a></li>
+				<li {% if page.url == "/en/contact"/%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}/contact">Contact</a></li>
 				{% if sub.first == "_correctionsfr" %}
 					<li><a href="{{site.baseurl}}{{page.url | replace:"correctionsfr","correctionsen"}}">EN / <span style="color:#d2814c;font-weight:bold">FR</span></a></li>	
 				{% else %}

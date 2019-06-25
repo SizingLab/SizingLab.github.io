@@ -146,3 +146,17 @@ padding-top: 30px;
     font-weight: bold;
     margin-top: 30px;
 }
+.contactBox{
+    position: fixed;
+    z-index: 99999;
+    right: 1%;
+    bottom: 0%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    width: 150px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #d2814cb8;
+}

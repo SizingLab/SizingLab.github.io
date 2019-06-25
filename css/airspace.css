@@ -398,7 +398,7 @@ background-position: center center;
   letter-spacing: 6px;
   padding-bottom: 15px;
   margin-top: 0;
-  text-transform: capitalize;
+  text-transform: uppercase;
 color: #d2814c;
 }
 #global-header .block p {

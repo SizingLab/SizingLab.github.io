@@ -26,7 +26,6 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
 				{% if page.lang == "en" %}
-				<li {% if page.url == "/en/"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}">Home</a></li>
 				<li class ="dropdown {% if page.url == "/en/institutes/" or page.url == "/en/members/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Partners</a>
 					<ul class="dropdown-menu">
 						<li><a href="{{ site.baseurl }}/{{page.lang}}/institutes">Institutes</a></li>
@@ -45,12 +44,13 @@
 						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources-ext">External ressources</a></li>
 					</ul>
 				</li>
-				<li class ="dropdown {% if page.url == "/en/models/" or page.url == "/en/cases/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Examples</a>
+				<li class ="dropdown {% if page.url == "/en/models/" or page.url == "/en/cases/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Applications cases</a>
 					<ul class="dropdown-menu">
 						<li><a href="{{ site.baseurl }}/{{page.lang}}/models">Models</a></li>
 						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases">Cases studies</a></li>
 					</ul>
 				</li>
+				<li {% if page.url == "/en/contact"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}/contact">Contact</a></li>
 				{% if sub.first == "_correctionsen" %}
 					<li><a href="{{site.baseurl}}{{page.url | replace:"correctionsen","correctionsfr"}}"><span style="color:#d2814c;font-weight:bold">EN</span> / FR</a></li>	
 				{% else %}
@@ -80,12 +80,13 @@
 						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources-ext">Ressources externes</a></li>
 					</ul>
 				</li>
-				<li class ="dropdown {% if page.url == "/fr/models/" or page.url == "/fr/cases/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Exemples</a>
+				<li class ="dropdown {% if page.url == "/fr/models/" or page.url == "/fr/cases/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Cas d'application</a>
 					<ul class="dropdown-menu">
 						<li><a href="{{ site.baseurl }}/{{page.lang}}/models">Modèles</a></li>
 						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases">Cas d'études</a></li>
 					</ul>
 				</li>
+				<li {% if page.url == "/en/contact"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}/contact">Contact</a></li>
 				{% if sub.first == "_correctionsfr" %}
 					<li><a href="{{site.baseurl}}{{page.url | replace:"correctionsfr","correctionsen"}}">EN / <span style="color:#d2814c;font-weight:bold">FR</span></a></li>	
 				{% else %}

@@ -160,3 +160,9 @@ padding-top: 30px;
     border-top-right-radius: 10px;
     background: #d2814cb8;
 }
+@media (min-width: 768px) {
+	.col-sm-3{
+		height:110px;
+	}
+}
+}

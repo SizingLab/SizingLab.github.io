@@ -1,6 +1,6 @@
 <!-- Header Start -->
 <header>
-{% assign sub = page.path | split: "/" %}
+
 			
 <div class="container">
   <div class="row">
@@ -26,70 +26,68 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
 				{% if page.lang == "en" %}
-				<li class ="dropdown {% if page.url == "/en/institutes/" or page.url == "/en/members/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Partners</a>
+				<li class ="dropdown {% if page.url == "/en/gis/" or page.url == "/en/members/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">GIS</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/institutes">Institutes</a></li>
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/members">Members</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/gis" {% if page.url == "/en/gis/"%}style="color: #d2814c;"{% endif %}>What is a GIS ?</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/members" {% if page.url == "/en/members/"%}style="color: #d2814c;"{% endif %}>Members</a></li>
 					</ul>
 				</li>
 				<li class ="dropdown {% if page.url == "/en/publications/" or page.url == "/en/packages/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Methods & Tools</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/publications">Publications</a></li>
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/packages">Packages</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/publications" {% if page.url == "/en/publications/"%}style="color: #d2814c;"{% endif %}>Publications</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/packages" {% if page.url == "/en/packages/"%}style="color: #d2814c;"{% endif %}>Packages</a></li>
 					</ul>
 				</li>
-				<li class ="dropdown {% if page.url == "/en/ressources/" or page.url == "/en/ressources-ext/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Web Learning</a>
+				<li class ="dropdown {% if page.url == "/en/designs/" or page.url == "/en/sizing-models/" or page.url == "/en/sizing-codes/" or page.url == "/en/optimizations/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Web Learning</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources">Our ressources</a></li>
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources-ext">External ressources</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/designs" {% if page.url == "/en/designs/"%}style="color: #d2814c;"{% endif %}>Architecture & Design Drivers</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/sizing-models" {% if page.url == "/en/sizing-models/"%}style="color: #d2814c;"{% endif %}>Sizing Models</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/sizing-codes" {% if page.url == "/en/sizing-codes/"%}style="color: #d2814c;"{% endif %}>Sizing Codes</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/optimizations" {% if page.url == "/en/optimizations/"%}style="color: #d2814c;"{% endif %}>Optimizations & Explanations</a></li>
 					</ul>
 				</li>
 				<li class ="dropdown {% if page.url == "/en/models/" or page.url == "/en/cases/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Applications cases</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/models">Models</a></li>
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases">Cases studies</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/models" {% if page.url == "/en/models/"%}style="color: #d2814c;"{% endif %}>Models Examples</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases" {% if page.url == "/en/cases/"%}style="color: #d2814c;"{% endif %}>Cases Studies</a></li>
 					</ul>
 				</li>
 				<li {% if page.url == "/en/contact/"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}/contact">Contact</a></li>
-				{% if sub.first == "_correctionsen" %}
-					<li><a href="{{site.baseurl}}{{page.url | replace:"correctionsen","correctionsfr"}}"><span style="color:#d2814c;font-weight:bold">EN</span> / FR</a></li>	
-				{% else %}
-					<li><a href="{{site.baseurl}}{{page.url | replace:"/en","/fr"}}"><span style="color:#d2814c;font-weight:bold">EN</span> / FR</a></li>
-				{% endif %}
+				<li><a href="{{site.baseurl}}{{page.url | replace:"/en","/fr"}}"><span style="color:#d2814c;font-weight:bold">EN</span> / FR</a></li>
+		
 				
 			
 				{% endif %}
 				{% if page.lang == "fr" %}
-				<li class ="dropdown {% if page.url == "/fr/institutes/" or page.url == "/fr/members/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Partenaires</a>
+				<li class ="dropdown {% if page.url == "/fr/gis/" or page.url == "/fr/members/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">GIS</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/institutes">Instituts</a></li>
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/members">Membres</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/gis" {% if page.url == "/fr/gis/"%}style="color: #d2814c;"{% endif %}>Qu'est ce qu'un GIS ?</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/members" {% if page.url == "/fr/members/"%}style="color: #d2814c;"{% endif %}>Membres</a></li>
 					</ul>
 				</li>
 				<li class ="dropdown {% if page.url == "/fr/publications/" or page.url == "/fr/packages/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Méthodes & Outils</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/publications">Publications</a></li>
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/packages">Packages</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/publications" {% if page.url == "/fr/publications/"%}style="color: #d2814c;"{% endif %}>Publications</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/packages" {% if page.url == "/fr/packages/"%}style="color: #d2814c;"{% endif %}>Packages</a></li>
 					</ul>
 				</li>
-				<li class ="dropdown {% if page.url == "/fr/ressources/" or page.url == "/fr/ressources-ext/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Cours</a>
+				<li class ="dropdown {% if page.url == "/fr/designs/" or page.url == "/fr/sizing-models/" or page.url == "/fr/sizing-codes/" or page.url == "/fr/optimizations/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Cours</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources">Nos ressources</a></li>
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/ressources-ext">Ressources externes</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/designs" {% if page.url == "/fr/designs/"%}style="color: #d2814c;"{% endif %}>Architecture & Design Drivers</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/sizing-models" {% if page.url == "/fr/sizing-models/"%}style="color: #d2814c;"{% endif %}>Sizing Models</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/sizing-codes" {% if page.url == "/fr/sizing-codes/"%}style="color: #d2814c;"{% endif %}>Sizing Codes</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/optimizations" {% if page.url == "/fr/optimizations/"%}style="color: #d2814c;"{% endif %}>Optimisations & Explications</a></li>
 					</ul>
 				</li>
-				<li class ="dropdown {% if page.url == "/fr/models/" or page.url == "/fr/cases/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Cas d'application</a>
+				<li class ="dropdown {% if page.url == "/fr/models/" or page.url == "/fr/cases/"%}active{% endif %}"><a class="dropdown-toggle" data-toggle="dropdown"href="#">Cas d'applications</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/models">Modèles</a></li>
-						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases">Cas d'études</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/models" {% if page.url == "/fr/models/"%}style="color: #d2814c;"{% endif %}>Exemples de modèles</a></li>
+						<li><a href="{{ site.baseurl }}/{{page.lang}}/cases" {% if page.url == "/fr/cases/"%}style="color: #d2814c;"{% endif %}>Cas d'études</a></li>
 					</ul>
 				</li>
-				<li {% if page.url == "/en/contact/"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}/contact">Contact</a></li>
-				{% if sub.first == "_correctionsfr" %}
-					<li><a href="{{site.baseurl}}{{page.url | replace:"correctionsfr","correctionsen"}}">EN / <span style="color:#d2814c;font-weight:bold">FR</span></a></li>	
-				{% else %}
+				<li {% if page.url == "/fr/contact/"%}class="active"{% endif %}><a href="{{ site.baseurl }}/{{page.lang}}/contact">Contact</a></li>
 				<li><a href="{{site.baseurl}}{{page.url | replace:"/fr","/en"}}">EN / <span style="color:#d2814c;font-weight:bold">FR</span></a></li>
-				{% endif %}
+				
 			
 				{% endif %}
               </ul>

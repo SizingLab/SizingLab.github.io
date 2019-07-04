@@ -1,5 +1,9 @@
 # Utilisation du site
 
+## Lien vers site
+
+https://sizinglab.github.io/en/
+
 ## Structure du site
 
 Le code sources du site est décomposé en plusieurs dossiers importants : 
